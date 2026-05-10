@@ -2,7 +2,7 @@ name: DevSecOps CI/CD Pipeline
 
 on:
   push:
-    branches: [main, develop, part2-nouha, insecure-app]
+    branches: [main, develop, part2-nouha, insecure-app, secure-app]
   pull_request:
     branches: [main]
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Bandit SAST
         run: |
-          bandit -r part1/app_vulnerable.py \
+          bandit -r part1/app_secure.py \
             -f json \
             -o bandit_report.json \
             --severity-level medium \

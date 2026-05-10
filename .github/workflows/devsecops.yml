@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Bandit SAST
         run: |
-          bandit -r code/session1/app_secure.py \
+          bandit -r part1/app_secure.py \
             -f json \
             -o bandit_report.json \
             --severity-level medium \
@@ -74,7 +74,7 @@ jobs:
       - name: Check dependencies for CVEs
         run: |
           safety check \
-            -r code/session1/requirements.txt \
+            -r requirements.txt \
             --json \
             --output safety_report.json || true
           
@@ -114,13 +114,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r code/session1/requirements.txt
+          pip install -r requirements.txt
           pip install pytest pytest-flask
 
       - name: Run security tests
         run: |
           cd code/session2
-          pytest test_security.py -v \
+          pytest part2/test_security.py -v \
             --tb=short \
             --junitxml=security_test_results.xml
 
@@ -129,7 +129,7 @@ jobs:
         if: always()
         with:
           name: security-test-results
-          path: code/session2/security_test_results.xml
+          path: part2/security_test_results.xml
 
   # ─── Job 4: Secret Scanning ──────────────────────────────────────────────────
   secret-scan:
@@ -188,8 +188,8 @@ jobs:
 
       - name: Start Flask app
         run: |
-          pip install -r code/session1/requirements.txt
-          SECRET_KEY=testkey python code/session1/app_secure.py &
+          pip install -r requirements.txt
+          SECRET_KEY=testkey python part1/app_secure.py &
           sleep 3
           curl -f http://127.0.0.1:5001/ || exit 1
 

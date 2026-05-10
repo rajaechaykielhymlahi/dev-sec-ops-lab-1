@@ -119,7 +119,7 @@ jobs:
 
       - name: Run security tests
         run: |
-          cd code/session2
+        
           pytest part2/test_security.py -v \
             --tb=short \
             --junitxml=security_test_results.xml

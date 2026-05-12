@@ -1,0 +1,330 @@
+PS C:\Users\rajae\Desktop\dev-sec-ops-lab-1\part3> docker inspect lab_web
+[
+    {
+        "Id": "d131cc457dbf686d161f59edce5d7a2e2ad237bfa785679ee92c7b44fb2490ed",
+        "Created": "2026-05-12T21:31:29.592482677Z",
+        "Path": "dumb-init",
+        "Args": [
+            "--",
+            "gunicorn",
+            "--bind",
+            "0.0.0.0:8000",
+            "--workers",
+            "2",
+            "--timeout",
+            "30",
+            "--access-logfile",
+            "-",
+            "--error-logfile",
+            "-",
+            "--log-level",
+            "info",
+            "app_secure:app"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 22406,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-05-12T21:31:30.922993397Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "unhealthy",
+                "FailingStreak": 13,
+                "Log": [
+                    {
+                        "Start": "2026-05-12T21:35:46.773009563Z",
+                        "End": "2026-05-12T21:35:47.595116648Z",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: NOT FOUND\n"
+                    },
+                    {
+                        "Start": "2026-05-12T21:36:17.593864534Z",
+                        "End": "2026-05-12T21:36:18.169519929Z",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: NOT FOUND\n"
+                    },
+                    {
+                        "Start": "2026-05-12T21:36:48.16799218Z",
+                        "End": "2026-05-12T21:36:48.687354624Z",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: NOT FOUND\n"
+                    },
+                    {
+                        "Start": "2026-05-12T21:37:18.687097063Z",
+                        "End": "2026-05-12T21:37:19.175773245Z",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: NOT FOUND\n"
+                    },
+                    {
+                        "Start": "2026-05-12T21:37:49.175153701Z",
+                        "End": "2026-05-12T21:37:49.66406825Z",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: NOT FOUND\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:ebefead57373c692b8084c7981fec13217987819f30cb9cf69dd5886bcec08f5",
+        "ResolvConfPath": "/var/lib/docker/containers/d131cc457dbf686d161f59edce5d7a2e2ad237bfa785679ee92c7b44fb2490ed/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/d131cc457dbf686d161f59edce5d7a2e2ad237bfa785679ee92c7b44fb2490ed/hostname",
+        "HostsPath": "/var/lib/docker/containers/d131cc457dbf686d161f59edce5d7a2e2ad237bfa785679ee92c7b44fb2490ed/hosts",
+        "LogPath": "/var/lib/docker/containers/d131cc457dbf686d161f59edce5d7a2e2ad237bfa785679ee92c7b44fb2490ed/d131cc457dbf686d161f59edce5d7a2e2ad237bfa785679ee92c7b44fb2490ed-json.log",
+        "Name": "/lab_web",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "5",
+                    "max-size": "10m"
+                }
+            },
+            "NetworkMode": "part3_app_network",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "8000"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": [
+                "CAP_NET_BIND_SERVICE"
+            ],
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges:true",
+                "seccomp={\"defaultAction\":\"SCMP_ACT_ALLOW\",\"architectures\":[\"SCMP_ARCH_X86_64\"],\"syscalls\":[]}"
+            ],
+            "Tmpfs": {
+                "/app/data": "size=100m",
+                "/tmp": "size=50m,mode=1777"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 268435456,
+            "NanoCpus": 500000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 67108864,
+            "MemorySwap": 536870912,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "d131cc457dbf",
+            "Domainname": "",
+            "User": "1000:1000",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "SECRET_KEY=my_super_secret_key",
+                "REDIS_PASSWORD=redispass123",
+                "FLASK_ENV=production",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.15",
+                "PYTHON_SHA256=272179ddd9a2e41a0fc8e42e33dfbdca0b3711aa5abf372d3f2d51543d09b625"
+            ],
+            "Cmd": [
+                "gunicorn",
+                "--bind",
+                "0.0.0.0:8000",
+                "--workers",
+                "2",
+                "--timeout",
+                "30",
+                "--access-logfile",
+                "-",
+                "--error-logfile",
+                "-",
+                "--log-level",
+                "info",
+                "app_secure:app"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 10000000000,
+                "Retries": 3
+            },
+            "Image": "lab-app:v1",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "dumb-init",
+                "--"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "6ee47538d188b91b16573854f2b82402877196e577f22c7b442f6283b1c73f62",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "redis:service_started:false",
+                "com.docker.compose.image": "sha256:ebefead57373c692b8084c7981fec13217987819f30cb9cf69dd5886bcec08f5",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "part3",
+                "com.docker.compose.project.config_files": "C:\\Users\\rajae\\Desktop\\dev-sec-ops-lab-1\\part3\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\rajae\\Desktop\\dev-sec-ops-lab-1\\part3",
+                "com.docker.compose.service": "web",
+                "com.docker.compose.version": "5.1.0"
+            },
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "2dcaa0315e443fb1215d4f65a517971c7c23aa3bd9c50ea2e99bc0caad7f4ff2",
+            "SandboxKey": "/var/run/docker/netns/2dcaa0315e44",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "8000"
+                    }
+                ]
+            },
+            "Networks": {
+                "part3_app_network": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "lab_web",
+                        "web"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "f5539b7fde81457b72d946eae9515ef363b85af2241cd7a06efd3fe160ffb5fe",
+                    "EndpointID": "55ade5690e37fe01f0514c2a6a4c562bcb68bf276a52e10fe4bc9bd29347221c",
+                    "Gateway": "172.20.0.1",
+                    "IPAddress": "172.20.0.3",
+                    "MacAddress": "8e:ab:dc:cc:07:b3",
+                    "IPPrefixLen": 24,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "lab_web",
+                        "web",
+                        "d131cc457dbf"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:f8b6473750fac108ccd9767786b19bed7a19a364f57179177d2f1b26e0abda3c",
+            "size": 2379,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

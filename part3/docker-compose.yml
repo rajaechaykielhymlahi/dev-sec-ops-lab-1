@@ -7,9 +7,9 @@ services:
   # ─── Flask Application ──────────────────────────────────────────────────────
   web:
     build:
-      context: ../session1
-      dockerfile: ../session3/Dockerfile
-    image: devsecops-lab:latest
+      context: .
+      dockerfile: Dockerfile
+    image: lab-app:v1
     container_name: lab_web
     restart: unless-stopped
 
@@ -115,8 +115,8 @@ services:
     security_opt:
       - no-new-privileges:true
     ports:
-      - "443:443"
-      - "80:80"   # Redirects to 443
+      - "8443:443"
+      - "8080:80"   # Redirects to 443
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./certs:/etc/nginx/certs:ro
